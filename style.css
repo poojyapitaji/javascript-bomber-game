@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.scoreboard {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 40rem;
+    height: auto;
+    padding: 20px 30px;
+    display: none;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: black;
+    text-transform: uppercases;
+}
+
+.card-body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: .5rem;
+}
+
+.card-body>h1:nth-child(1) {
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+.card-body>h1:nth-child(2) {
+    font-weight: bolder;
+    font-size: 5rem;
+    color: #1abc9c;
+}
+
+.restart,
+.start {
+    width: 100%;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.start {
+    position: absolute;
+    width: 30rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.restart:hover {
+    opacity: 0.8;
+}
