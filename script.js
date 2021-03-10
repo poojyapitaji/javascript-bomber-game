@@ -32,7 +32,9 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 start_sound = new Howl({
     src: ['sound/music.mp3'],
     html5: true,
+    loop: true,
     buffer: true,
+loop:
     volume: 0.6
 })
 
@@ -191,6 +193,7 @@ start_btn.addEventListener("click", (e) => {
 addEventListener("click", (e) => {
     new Howl({
         src: ['sound/shoot.mp3'],
+        buffer: true,
     }).play()
     const angle = Math.atan2(e.clientY - canvas_center_y, e.clientX - canvas_center_x)
     bombs.push(
@@ -359,7 +362,8 @@ function shootBomb() {
 function updateScore(point) {
     new Howl({
         src: ['sound/blast.mp3'],
-        volume: 1
+        volume: 1,
+        buffer: true,
     }).play()
     document.getElementById("scorebard").innerHTML = `Score: ${point}`
 }
@@ -367,7 +371,8 @@ function updateScore(point) {
 function showScoreCard(point) {
     new Howl({
         src: ['sound/over.mp3'],
-        volume: 1
+        volume: 1,
+        buffer: true,
     }).play()
     pause()
     document.querySelector(".card").style.display = "block"
